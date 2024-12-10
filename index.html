@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <link href="images/bg.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.13/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <style>
+        .svg {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+    </style>
+</head> 
+
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#9B7EBD',
+                    secondary: '',
+                    tertiary: '',
+                },
+                boxShadow: {
+                    middle: '0px 0px 150px 150px rgba(212, 190, 228, 0.25)',
+                },
+                keyframes: {
+                    fadeIn: {
+                        '0%': { opacity: 0 },
+                        '100%': { opacity: 1 },
+                    },
+                },
+                animation: {
+                    fadeIn: "fadeIn 2s forwards",
+                },
+            },
+        },
+    };
+    </script>
+
+<body class="bg-[#0A0A14]">
+    <nav class="relative z-20 w-[90%] mx-auto py-6 px-4">
+        <div class="flex justify-between items-center gap-2">
+            <h1 class="select-none text-lg md:text-xl text-primary font-extrabold">SOLWENS</h1>
+            <div class="flex justify-center items-center gap-3">
+                <a href="#" class="border-[1.5px] border-gray-500 py-2 px-5 rounded-2xl">
+                    <h1 class="text-white text-xs font-semibold">Sign in</h1>
+                </a>
+                <a href="#" class="bg-primary py-2 px-5 rounded-2xl">
+                    <h1 class="text-white text-xs font-semibold">Sign up</h1>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-[90%] mx-auto">
+        <div class="absolute inset-[50%] w-fit rounded-full shadow-middle"></div>
+        <div class="absolute -mt-16 inset-0 z-10 flex justify-center items-center">
+            <div class="relative flex justify-center items-center">
+                <img class="w-[80%] mx-auto animate-pulse" src="imgs/3D.png">
+                <svg class="w-3 fill-white animate-pulse absolute left-24 top-24" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(90 6 6.5)"/>
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(-180 6 6.5)"/>
+                </svg>
+                <svg class="w-3 fill-white animate-pulse absolute right-24 top-20" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(90 6 6.5)"/>
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(-180 6 6.5)"/>
+                </svg>
+                <svg class="w-3 fill-white animate-pulse absolute left-14 bottom-44" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(90 6 6.5)"/>
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(-180 6 6.5)"/>
+                </svg>
+                <svg class="w-3 fill-white animate-pulse absolute right-14 bottom-40" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(90 6 6.5)"/>
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(-180 6 6.5)"/>
+                </svg>
+                <div class="absolute -bottom-14 space-y-5">
+                    <div class="select-none text-center space-y-3 md:space-y-5">
+                        <h1 class="text-slate-300 text-3xl md:text-5xl font-semibold">Create. Model. Inspire</h1>
+                        <p class="text-slate-300 text-[10px] md:text-base font-medium">3D-editor platform for creating, modeling, <br> visualizing, and editing your projects</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-3 md:gap-4">
+                        <button class="flex justify-center items-center gap-2 bg-zinc-800 py-2 px-5 border border-slate-900 rounded-2xl">
+                            <h1 class="text-white text-[10px] md:text-sm">Get Started</h1>
+                            <svg class="w-4 md:w-5 stroke-white stroke-[2]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="flex justify-center items-center gap-2 bg-zinc-800 py-2 px-5 border border-slate-900 rounded-2xl">
+                            <svg class="w-4 md:w-5 stroke-white stroke-[1.5]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.8876 9.9348C14.9625 10.8117 15.5 11.2501 15.5 12C15.5 12.7499 14.9625 13.1883 13.8876 14.0652C13.5909 14.3073 13.2966 14.5352 13.0261 14.7251C12.7888 14.8917 12.5201 15.064 12.2419 15.2332C11.1695 15.8853 10.6333 16.2114 10.1524 15.8504C9.6715 15.4894 9.62779 14.7336 9.54038 13.2222C9.51566 12.7947 9.5 12.3757 9.5 12C9.5 11.6243 9.51566 11.2053 9.54038 10.7778C9.62779 9.26636 9.6715 8.51061 10.1524 8.1496C10.6333 7.78859 11.1695 8.11466 12.2419 8.76679C12.5201 8.93597 12.7888 9.10831 13.0261 9.27492C13.2966 9.46483 13.5909 9.69274 13.8876 9.9348Z"/>
+                                <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                            </svg>
+                            <h1 class="text-white text-[10px] md:text-sm">Watch Video</h1>
+                        </button>
+                    </div>
+                </div>
+                <svg id="star1" class="w-3 fill-white absolute left-10 top-5" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(90 6 6.5)"/>
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(-180 6 6.5)"/>
+                </svg>
+                <svg id="star2" class="w-3 fill-white absolute right-10 top-10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(90 6 6.5)"/>
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(-180 6 6.5)"/>
+                </svg>
+                <svg id="star3" class="w-3 fill-white absolute right-40 top-5" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(90 6 6.5)"/>
+                    <ellipse cx="6" cy="6.5" rx="1.5" ry="6" transform="rotate(-180 6 6.5)"/>
+                </svg>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
