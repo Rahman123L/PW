@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <link href="images/bg.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.13/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <style>
+        .svg {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+    </style>
+</head> 
+
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#9B7EBD',
+                    secondary: '',
+                    tertiary: '',
+                },
+                boxShadow: {
+                    middle: '0px 0px 150px 150px rgba(212, 190, 228, 0.25)',
+                },
+                keyframes: {
+                    fadeIn: {
+                        '0%': { opacity: 0 },
+                        '100%': { opacity: 1 },
+                    },
+                },
+                animation: {
+                    fadeIn: "fadeIn 2s forwards",
+                },
+            },
+        },
+    };
+    </script>
+
+<body class="bg-[#0A0A14]">
+    <nav class="relative z-20 w-[90%] mx-auto py-6 px-4">
+        <div class="flex justify-between items-center gap-2">
+            <h1 class="select-none text-lg md:text-xl text-primary font-extrabold">SOLWENS</h1>
+            <div class="flex justify-center items-center gap-3">
+                <a href="index.html" class="border-[1.5px] border-gray-500 py-2 px-5 rounded-2xl">
+                    <h1 class="text-white text-xs font-semibold">Logout</h1>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-[90%] md:w-[80%] mx-auto">
+        <div class="absolute inset-[50%] w-fit rounded-full shadow-middle"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-5 pb-5">
+            <div class="bg-white bg-opacity-20 p-5 space-y-5 rounded-2xl">
+                <div class="">
+                    <h1 class="text-sm md:text-base text-white">Introduction to 3D Modeling</h1>
+                    <h1 class="text-[10px] md:text-xs text-white">Explore the basics of creating 3D models for games, movies, and more.</h1>
+                </div>
+                <div class="flex justify-start items-center gap-3">
+                    <div class="w-10 h-10 rounded-full">
+                        <img class="w-full h-full rounded-full" src="imgs/avatar.jpg">
+                    </div>
+                    <div class="-space-y-0.5">
+                        <h1 class="text-xs md:text-sm text-white">3D Techniques</h1>
+                        <h1 class="text-[10px] md:text-xs text-white">Learn about rendering</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white bg-opacity-20 p-5 space-y-5 rounded-2xl">
+                <div class="">
+                    <h1 class="text-sm md:text-base text-white">3D Printing Applications</h1>
+                    <h1 class="text-[10px] md:text-xs text-white">Discover how 3D printing is revolutionizing industries like healthcare and manufacturing.</h1>
+                </div>
+                <div class="flex justify-start items-center gap-3">
+                    <div class="w-10 h-10 rounded-full">
+                        <img class="w-full h-full rounded-full" src="imgs/avatar.jpg">
+                    </div>
+                    <div class="-space-y-0.5">
+                        <h1 class="text-xs md:text-sm text-white">Industrial Impact</h1>
+                        <h1 class="text-[10px] md:text-xs text-white">Case studies on 3D</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white bg-opacity-20 p-5 space-y-5 rounded-2xl">
+                <div class="">
+                    <h1 class="text-sm md:text-base text-white">Creating Realistic 3D Textures</h1>
+                    <h1 class="text-[10px] md:text-xs text-white">Techniques to make your 3D objects look more life-like.</h1>
+                </div>
+                <div class="flex justify-start items-center gap-3">
+                    <div class="w-10 h-10 rounded-full">
+                        <img class="w-full h-full rounded-full" src="imgs/avatar.jpg">
+                    </div>
+                    <div class="-space-y-0.5">
+                        <h1 class="text-xs md:text-sm text-white">Materials and Lighting</h1>
+                        <h1 class="text-[10px] md:text-xs text-white">Tips on working</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white bg-opacity-20 p-5 space-y-5 rounded-2xl">
+                <div class="">
+                    <h1 class="text-sm md:text-base text-white">Future of 3D Technology</h1>
+                    <h1 class="text-[10px] md:text-xs text-white">How AI and VR are shaping the evolution of 3D technology.</h1>
+                </div>
+                <div class="flex justify-start items-center gap-3">
+                    <div class="w-10 h-10 rounded-full">
+                        <img class="w-full h-full rounded-full" src="imgs/avatar.jpg">
+                    </div>
+                    <div class="-space-y-0.5">
+                        <h1 class="text-xs md:text-sm text-white">Innovations in 3D</h1>
+                        <h1 class="text-[10px] md:text-xs text-white">The latest trends</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white bg-opacity-20 p-5 space-y-5 rounded-2xl">
+                <div class="">
+                    <h1 class="text-sm md:text-base text-white">Introduction to 3D Modeling</h1>
+                    <h1 class="text-[10px] md:text-xs text-white">Explore the basics of creating 3D models for games, movies, and more.</h1>
+                </div>
+                <div class="flex justify-start items-center gap-3">
+                    <div class="w-10 h-10 rounded-full">
+                        <img class="w-full h-full rounded-full" src="imgs/avatar.jpg">
+                    </div>
+                    <div class="-space-y-0.5">
+                        <h1 class="text-xs md:text-sm text-white">3D Techniques</h1>
+                        <h1 class="text-[10px] md:text-xs text-white">Learn about rendering</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white bg-opacity-20 p-5 space-y-5 rounded-2xl">
+                <div class="">
+                    <h1 class="text-sm md:text-base text-white">3D Printing Applications</h1>
+                    <h1 class="text-[10px] md:text-xs text-white">Discover how 3D printing is revolutionizing industries like healthcare and manufacturing.</h1>
+                </div>
+                <div class="flex justify-start items-center gap-3">
+                    <div class="w-10 h-10 rounded-full">
+                        <img class="w-full h-full rounded-full" src="imgs/avatar.jpg">
+                    </div>
+                    <div class="-space-y-0.5">
+                        <h1 class="text-xs md:text-sm text-white">Industrial Impact</h1>
+                        <h1 class="text-[10px] md:text-xs text-white">Case studies on 3D</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white bg-opacity-20 p-5 space-y-5 rounded-2xl">
+                <div class="">
+                    <h1 class="text-sm md:text-base text-white">Creating Realistic 3D Textures</h1>
+                    <h1 class="text-[10px] md:text-xs text-white">Techniques to make your 3D objects look more life-like.</h1>
+                </div>
+                <div class="flex justify-start items-center gap-3">
+                    <div class="w-10 h-10 rounded-full">
+                        <img class="w-full h-full rounded-full" src="imgs/avatar.jpg">
+                    </div>
+                    <div class="-space-y-0.5">
+                        <h1 class="text-xs md:text-sm text-white">Materials and Lighting</h1>
+                        <h1 class="text-[10px] md:text-xs text-white">Tips on working</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white bg-opacity-20 p-5 space-y-5 rounded-2xl">
+                <div class="">
+                    <h1 class="text-sm md:text-base text-white">Future of 3D Technology</h1>
+                    <h1 class="text-[10px] md:text-xs text-white">How AI and VR are shaping the evolution of 3D technology.</h1>
+                </div>
+                <div class="flex justify-start items-center gap-3">
+                    <div class="w-10 h-10 rounded-full">
+                        <img class="w-full h-full rounded-full" src="imgs/avatar.jpg">
+                    </div>
+                    <div class="-space-y-0.5">
+                        <h1 class="text-xs md:text-sm text-white">Innovations in 3D</h1>
+                        <h1 class="text-[10px] md:text-xs text-white">The latest trends</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
